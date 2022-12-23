@@ -6,8 +6,8 @@ const del = require('del');
 function getDatabaseType(url = process.env.DATABASE_URL) {
   const type = process.env.DATABASE_TYPE || (url && url.split(':')[0]);
 
-  if (type === 'postgres') {
-    return 'postgresql';
+  if (type === 'mysql') {
+    return 'mysql';
   }
 
   return type;
